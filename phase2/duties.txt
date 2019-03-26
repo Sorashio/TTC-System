@@ -1,0 +1,22 @@
+Qingyuan Qie:
+- All of the GUI interfaces except for the DataViewer interface;
+- Debug the data saving and system and make it work smoothly;
+- Add the TransitPass feature;
+- Implement the Payment System;
+- Refactor the code from phase1;
+
+Eric Koehli:
+- Help with the refactor from phase 1
+- Designed DataViewer GUI
+- Implement DataViewerController
+
+Ruiqi Wang:
+- Add the RouteFinder feature;
+- Implement RoutePlannerController and fxml;
+- Implement DataViewerController;
+- Help with refactoring codes from Phase1;
+
+Zifeng Zhu:
+- add and check all the configuration files;
+- completed design.pdf
+- Help with refactoring codes from Phase1;

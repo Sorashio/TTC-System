@@ -1,0 +1,3 @@
+156(trump@us.gov): 10, yes;
+135(trump@us.gov): 8848, no;
+144(tom@cs.toronto.ca): 40, yes;

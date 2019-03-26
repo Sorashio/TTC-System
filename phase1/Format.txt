@@ -1,0 +1,75 @@
+#######################################################################
+Stations.txt:
+
+N.B. 1. Stations/Stops that are at the same location must have same name.
+2. Put station name in double quote.
+3. Every line must end with ;
+4. Name of Stations and Stops must contain only English letters and numbers.
+5. Name of user email and user name MUST NOT contain the following reserved key word:
+"enters", "exits", "deactivate", "activate", "adds card", "removes", "recent trips",
+"average costs", "changes name", "New card", "adds value", "views balance", "daily report",
+"monthly report", "average report", "New transitUser", "views last 3". Including such words in
+user email/user name is a guarantee that the program will fail, do it at your own peril.
+
+################################## Format for subway lines: ############################
+
+SubwayLineName(Subway): "Station1" - "Station2" - ... - "StationN";
+
+Format for bus lines:
+
+BusLineName(Bus): "Stop1" - "Stop2" - ... - "StopN"
+
+Examples:
+
+Line1(Subway): "St George" - "Queen's park" - "St.patrick" - "Queen" - "Union";
+
+503(Bus): "St George" - "Queen's park" - "St.patrick" - "Queen" - "Union";
+
+TransitSystemClasses.User.txt
+
+################################## Format for current users: ############################
+
+FirstName, Last Name(Email)
+
+Example:
+
+Donald, Trump(trump@us.gov);
+
+#######################################################################
+
+TransitSystemClasses.Card.txt
+
+N.B. CardID must be unique.
+
+################################## Format for current cards: #############################
+
+CardId(Email): CardBalance, IsActivate(yes/no);
+
+Example:
+
+314(trump@us.gov): 8848, no;
+156(trump@us.gov): -10, yes;
+
+########################################################################
+Event.txt:
+
+[yyyy/mm/dd/hh/ss] [CardId] loads balance [Number];
+[yyyy/mm/dd/hh/ss] [CardId] enters [StationName] (Route);
+[yyyy/mm/dd/hh/ss] [CardId] exits [StationName] (Route);
+[yyyy/mm/dd/hh/ss] [CardId] enters [StopName] (Route);
+[yyyy/mm/dd/hh/ss] [CardId] exits [StopName] (Route);
+[yyyy/mm/dd/hh/ss] [CardId] deactivate by [UserEmail];
+[yyyy/mm/dd/hh/ss] [CardId] activate by [UserEmail];
+[yyyy/mm/dd/hh/ss] [User] adds/removes card  [CardId];
+[yyyy/mm/dd/hh/ss] [User] requests average costs;
+[yyyy/mm/dd/hh/ss] [User] views recent trips;
+[yyyy/mm/dd/hh/ss] [UserEmail] changes name to [firstName, lastName];
+[yyyy/mm/dd/hh/ss] [User] requests cards information;
+[yyyy/mm/dd/hh/ss] New transitUser [firstName, lastName], [Email];
+[yyyy/mm/dd/hh/ss] [AdminUser] requests daily report;
+[yyyy/mm/dd/hh/ss] New card [CardId] for [UserEmail];
+[yyyy/mm/dd/hh/ss] [Card] adds value [Value] by [UserEmail];
+[yyyy/mm/dd/hh/ss] [CardId] views balance for [UserEmail];
+[yyyy/mm/dd/hh/ss] AdminUser views daily report [Date];
+[yyyy/mm/dd/hh/ss] AdminUser views monthly report [Date];
+[yyyy/mm/dd/hh/ss] [UserEmail] views last 3 trips in [Card];
